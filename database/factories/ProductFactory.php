@@ -1,0 +1,33 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Product;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ProductFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Product::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            "name" => $this->faker->name,
+            "category_id" => rand(1, 10),
+            "description" => $this->faker->text(100),
+            "price" => rand(100, 500),
+            "manufact_name" => $this->faker->name,
+            "manufact_desc" => $this->faker->text(100)
+        ];
+    }
+}

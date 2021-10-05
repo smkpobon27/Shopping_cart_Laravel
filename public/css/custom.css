@@ -1,0 +1,7 @@
+.page-item.active .page-link{
+    background-color: #b7472a;
+    border: 1px solid transparent;
+}
+.block-27 ul li a, .block-27 ul li span{
+    padding: 0px;
+}
